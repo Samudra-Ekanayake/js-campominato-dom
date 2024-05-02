@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(165, 116, 42);
+    color: white;
+}
+
+.titolo {
+    text-align: center;
+    margin: 2rem;
+    color: yellow;
+
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    border: solid 1px yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evidenziata {
+    background-color: rgb(83, 187, 222)
+}
