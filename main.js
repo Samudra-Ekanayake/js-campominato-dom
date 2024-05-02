@@ -2,6 +2,7 @@
 
 let griglia = document.getElementById("grid");
 let bombe = generaBombe();
+let punteggio = 0
 
 
 function creaQuadrato(numero) {
@@ -12,12 +13,10 @@ function creaQuadrato(numero) {
     square.addEventListener("click", function () {
         if (bombe.includes(numero)) {
             this.classList.add("bomba");
+            alert("game over")
         } else {
-            if (!this.classList.contains("evidenziata")) {
-                this.classList.add("evidenziata");
-            } else {
-                this.classList.remove("evidenziata")
-            }
+            !this.classList.toggle("evidenziata") 
+            aggiornaPunteggio (); 
         }
     });
 
@@ -37,6 +36,11 @@ function generaBombe() {
     }
 
     return bombe;
+}
+
+function aggiornaPunteggio () {
+    punteggio++;
+    console.log("punteggio: " + punteggio);
 }
 
 for (let i = 1; i <= 100; i++) {
