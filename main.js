@@ -41,7 +41,7 @@ function generaBombe() {
 
 for (let i = 1; i <= 100; i++) {
     let elemento = creaQuadrato(i);
-    griglia.append(elemento);
+    griglia.append(elemento); 
 }
 
 
